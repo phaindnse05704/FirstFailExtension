@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Timer</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <h3 class="text-primary">ahihi</h3>
+    <div id="app" v-on:load="start()">
+        <h3 class="text-primary">Timer: {{min}}:{{sec}}</h3>
+        <h5 class="text-danger" v-if="pomodoroState=='work'">{{title}}</h5>
+        <h5 class="text-success" v-if="pomodoroState=='rest'">{{title}}</h5>
+        <button class="btn btn-primary" @click="start()">Start</button>
+    </div>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
